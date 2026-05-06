@@ -1,0 +1,310 @@
+Student Management System — Complete Flow
+
+You’ll build this in 3 main parts:
+
+1. Create Custom Object
+2. Create Fields
+3. Create Tab
+4. Create Lightning App
+5. Test the App
+
+That’s it. No Apex needed.
+
+FINAL OUTPUT
+
+You’ll end up with:
+
+Student Management System App
+        ↓
+Students Tab
+        ↓
+Create / View / Edit Student Records
+PART 1 — CREATE CUSTOM OBJECT
+
+This creates your database table.
+
+Step 1: Open Setup
+
+Top-right:
+⚙️ Gear Icon → Setup
+
+Step 2: Go to Object Manager
+
+Top bar:
+
+Object Manager
+
+Click it.
+
+Step 3: Create Custom Object
+
+Click:
+
+Create → Custom Object
+Fill Details
+Field	Value
+Label	Student
+Plural Label	Students
+Record Name	Student Name
+Data Type	Text
+Important Checkbox
+
+✅ Check:
+
+Launch New Custom Tab Wizard after saving this custom object
+
+Then click:
+
+Save
+What happened?
+
+Salesforce created:
+
+Student database table
+internal API name
+storage structure
+
+Equivalent to SQL table creation.
+
+PART 2 — CREATE FIELDS
+
+Now we add columns to the Student table.
+
+Recommended Fields
+Field Name	Type
+Roll Number	Number
+Email	Email
+Phone Number	Phone
+Branch	Picklist
+Year	Picklist
+Marks	Number
+How to Add Fields
+
+Inside Student object:
+
+Fields & Relationships → New
+Create Each Field
+Roll Number
+
+Choose:
+
+Number
+
+Field Label:
+
+Roll Number
+
+Save.
+
+Email
+
+Choose:
+
+Email
+
+Field Label:
+
+Email
+
+Save.
+
+Phone Number
+
+Choose:
+
+Phone
+
+Field Label:
+
+Phone Number
+
+Save.
+
+Branch
+
+Choose:
+
+Picklist
+
+Field Label:
+
+Branch
+
+Values:
+
+Computer
+IT
+ENTC
+Mechanical
+Civil
+
+Save.
+
+Year
+
+Choose:
+
+Picklist
+
+Field Label:
+
+Year
+
+Values:
+
+FE
+SE
+TE
+BE
+
+Save.
+
+Marks
+
+Choose:
+
+Number
+
+Field Label:
+
+Marks
+
+Save.
+
+PART 3 — CREATE TAB
+
+This gives visible navigation in Salesforce.
+
+If Tab Wizard Opened Automatically
+
+Choose:
+
+Student
+
+Select any icon/color.
+
+Next → Next → Save
+
+Done.
+
+If Not Opened
+
+Go to:
+
+Setup → Tabs
+
+Then:
+
+Custom Object Tabs → New
+
+Choose:
+
+Student
+
+Save.
+
+PART 4 — CREATE LIGHTNING APP
+
+Now we make the full app.
+
+Step 1: App Manager
+
+Go:
+
+Setup → App Manager
+
+Click:
+
+New Lightning App
+Step 2: App Details
+Field	Value
+App Name	Student Management System
+
+Click:
+
+Next
+Step 3: Branding
+
+Optional:
+
+logo
+color
+
+Skip if needed.
+
+Next.
+
+Step 4: Navigation Items
+
+Add:
+
+Students
+Reports
+Dashboards
+
+Move them to Selected Items.
+
+Next.
+
+Step 5: User Profiles
+
+Select:
+
+System Administrator
+
+Save & Finish.
+
+PART 5 — OPEN YOUR APP
+
+Top-left:
+
+App Launcher
+
+Search:
+
+Student Management System
+
+Open it.
+
+PART 6 — TEST IT
+
+Go to:
+
+Students Tab
+
+Click:
+
+New
+
+Fill details:
+
+Field	Example
+Student Name	Triveni
+Roll Number	101
+Branch	Computer
+Year	TE
+Marks	92
+
+Save.
+
+DONE 🎉
+
+You now have:
+
+working Salesforce app
+custom object
+tab
+record management system
+
+without writing code.
+
+Architecture You Can Draw in Viva
+User
+ ↓
+Student Management System App
+ ↓
+Students Tab
+ ↓
+Student Object
+ ↓
+Student Records
